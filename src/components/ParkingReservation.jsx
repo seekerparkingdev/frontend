@@ -103,6 +103,7 @@ const ParkingReservation = () => {
 
   const eventsExtra = [
     {
+      id: 1,
       name: "Concierto de Rock en Vivo",
       venue: "Movistar Arena",
       image: "assets/event1.png",
@@ -110,6 +111,7 @@ const ParkingReservation = () => {
       distance: "42",
     },
     {
+      id: 2,
       name: "Festival de Jazz",
       venue: "Teatro Central",
       image: "assets/event2.png",
@@ -117,6 +119,7 @@ const ParkingReservation = () => {
       distance: "22",
     },
     {
+      id: 3,
       name: "Noche de Comedia",
       venue: "Café Teatro",
       image: "assets/event3.png",
@@ -124,6 +127,7 @@ const ParkingReservation = () => {
       distance: "92",
     },
     {
+      id: 4,
       name: "Concierto Sinfónico",
       venue: "Auditorio Nacional",
       image: "assets/event1.png",

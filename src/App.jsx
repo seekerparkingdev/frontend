@@ -1,6 +1,7 @@
 import "./styles/style.css";
 import { Routes, Route } from "react-router-dom";
 // vistas
+import ViewVenue from "./pages/pageVenue";
 import ViewHome from "./pages/pageHome";
 // componentes fijos
 import Footer from "./components/Footer";
@@ -13,6 +14,7 @@ function App() {
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<ViewHome />} />
+          <Route path="/venue" element={<ViewVenue/>} />
         </Routes>
       </main>
       <Footer />
