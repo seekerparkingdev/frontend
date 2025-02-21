@@ -2,34 +2,31 @@ import React from "react";
 
 const MovistarBanner = () => {
   return (
-    <div className="w-full max-w-9x1 mx-auto px-4 mt-3">
-      <div className="relative w-full h-80 overflow-hidden rounded-lg">
-        {/* Background image with overlay */}
+    <div className="w-full max-w-9x1 mx-auto px-16 mt-3">
+      <div className="relative w-full h-96 overflow-hidden rounded-3xl shadow-lg">
+        {/* Imagen del banner  */}
         <div
           className="absolute inset-0 bg-[url('/assets/banner.png')] bg-cover bg-center"
           style={{
             backgroundBlendMode: "multiply",
           }}
-        >
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/30"></div>
-        </div>
+        ></div>
 
         {/* Movistar Logo */}
-        <div className="absolute top-6 left-6">
+        <div className="absolute top-6 left-10">
           <div className="flex items-center">
-            <img 
-              src="/assets/movistar-arena.png" 
-              alt="Movistar Arena Logo" 
-              className="h-8 w-auto"
+            <img
+              src="/assets/movistar-arena.png"
+              alt="Movistar Arena Logo"
+              className="h-20 w-100"
             />
           </div>
         </div>
 
-        {/* Content Container */}
+        {/* Contenido Container */}
         <div className="relative h-full flex flex-col justify-between p-6">
           {/* Main Text */}
-          <div className="mt-20">
+          <div className="mt-20 ml-9">
             <h1 className="text-white text-4xl font-bold max-w-xl">
               Reservá estacionamiento y
               <br />
@@ -37,7 +34,7 @@ const MovistarBanner = () => {
             </h1>
           </div>
 
-          {/* Bottom Section with Location and Buttons */}
+          {/* Bottom seleccion y direccion */}
           <div className="flex items-center justify-between mt-auto">
             {/* Location */}
             <div className="flex items-center text-white">
@@ -52,15 +49,17 @@ const MovistarBanner = () => {
                   clipRule="evenodd"
                 />
               </svg>
-              <span>Humboldt 450, Ciudad de Buenos Aires</span>
+              <span className="font-urbanist  text-[#FFFFFF] text-xl">
+                Humboldt 450, Ciudad de Buenos Aires
+              </span>
             </div>
 
             {/* Buttons */}
             <div className="flex gap-4">
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+              <button className="px-6 py-2 bg-[#4B6FC7] text-white rounded-full border border-[#FFFFFF] ">
                 Como llegar
               </button>
-              <button className="px-6 py-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 transition-colors">
+              <button className="px-6 py-2 bg-[#4B6FC7] text-white rounded-full border border-[#FFFFFF] ">
                 Sitio oficial
               </button>
             </div>
