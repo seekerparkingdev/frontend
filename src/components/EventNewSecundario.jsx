@@ -64,7 +64,7 @@ const EventNewSecundario = () => {
   }, []);
 
   return (
-    <div className="max-w-[1800px] mx-auto px-4 py-4">
+    <div className="max-w-[1800px] mx-auto px-4 py-4 mt-4">
       <h1 className="text-[#30364C] md:text-4xl text-2xl font-bold font-urbanist mb-6">
         Nuevos eventos
       </h1>
