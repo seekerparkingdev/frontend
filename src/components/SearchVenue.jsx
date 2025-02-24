@@ -3,12 +3,12 @@ import { RxCross2 } from "react-icons/rx";
 import { IoSearchOutline } from "react-icons/io5";
 const SearchVenue = () => {
   return (
-    <div className="max-w-[1800px] mx-auto px-4 py-4 bg-[#F6FDFF] shadow-md rounded-lg mt-3 text-[#30364C">
-      <div className="flex gap-16">
-        <div className="relative flex-1">
+    <div className="md:max-w-[1800px] mx-auto px-4 py-4 bg-[#F6FDFF] shadow-md rounded-lg mt-3 text-[#30364C">
+      <div className="flex md:gap-16 gap-2">
+        <div className="relative md:flex-1 w-2/3">
           <input
             type="text"
-            placeholder="Explorar shows, artistas"
+            placeholder="Ej: Nicki Nicole"
             className="w-full pl-10 pr-4 py-3 rounded-full border   border-[#30364C] text-sm focus:outline-none  "
           />
           <div className="absolute left-4 top-1/2 text-[#30364C] -translate-y-1/2">
@@ -20,7 +20,7 @@ const SearchVenue = () => {
         </div>
 
         {/* Reducir el tamaño del input de fecha */}
-        <div className="relative w-[600px]">
+        <div className="relative md:w-[600px] w-1/2">
           <div className="relative flex items-center">
             <MdOutlineCalendarMonth className="absolute left-3 text-[#30364C]  text-lg" />
             <input
