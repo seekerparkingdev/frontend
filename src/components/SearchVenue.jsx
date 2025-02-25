@@ -3,7 +3,7 @@ import { RxCross2 } from "react-icons/rx";
 import { IoSearchOutline } from "react-icons/io5";
 const SearchVenue = () => {
   return (
-    <div className="md:max-w-[1800px] mx-auto px-4 py-4 bg-[#F6FDFF] shadow-md rounded-lg mt-3 text-[#30364C">
+    <div className="md:max-w-9xl mx-auto px-4 py-4 bg-[#F6FDFF] shadow-md rounded-lg mt-3 text-[#30364C">
       <div className="flex md:gap-16 gap-2">
         <div className="relative md:flex-1 w-2/3">
           <input

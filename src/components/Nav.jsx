@@ -13,12 +13,10 @@ const Nav = () => {
     <nav className="relative bg-white shadow-md">
       <div className="flex justify-between items-center p-4 border-b">
         {/* Logo + Desktop Menu */}
-        <div className="flex items-center space-x-4">
-          <img src="assets/logo.png" alt="Logo" className="w-10 h-6" />
-          <h1 className="text-[#394A8F] font-bold text-3xl">Seeker</h1>
+        <div className="flex items-center space-x-14  ">
+          <img src="assets/logo-title.png" alt="Logo" className="md:w-1/6 md:h-1/6 h-1/6 w-1/2" />
           {/* Desktop Menu */}
-
-          <ul className="hidden   md:flex space-x-6 text-[#394A8F] font-medium">
+          <ul className="hidden   md:flex space-x-6 text-[#394A8F] font-medium ">
             <li className="cursor-pointer hover:text-blue-600 transition">
               Contacto
             </li>

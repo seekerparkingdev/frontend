@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-white px-4 pt-4 pb-6">
+    <footer className="bg-white px-4 pt-4 pb-6 font-urbanist">
       {/* Sección de enlaces */}
       <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
@@ -95,15 +95,12 @@ const Footer = () => {
 
         {/* Sección inferior */}
         <div className="mt-4 sm:mt-2 flex flex-col items-start text-center sm:text-left">
-          <div className="flex justify-center sm:justify-start items-center mb-2">
+          <div className="flex justify-center sm:justify-start items-center mb-4">
             <img
-              src="/assets/logo.png"
+              src="/assets/logo-title.png"
               alt="Logo Seeker"
-              className="h-6 mr-2"
+              className="h-10 mr-2"
             />
-            <span className="text-[#394A8F] font-bold sm:text-center text-5xl">
-              Seeker
-            </span>
           </div>
           <p className="text-lg text-[#30364C] mt-1">
             © 2023 Seeker Parking. Todos los derechos reservados.

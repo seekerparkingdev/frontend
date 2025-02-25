@@ -33,7 +33,7 @@ const ParkingServiceSection = () => {
                 Estacioná de manera inteligente
               </p>
             </div>
-            <div className="absolute -z-10 top-0 right-0 w-64 h-64 bg-yellow-200 rounded-full opacity-50 blur-3xl" />
+            <div className="absolute -z-10 top-0 right-0 w-64 h-64   rounded-full opacity-50 blur-3xl" />
             <img
               src="assets/parking-service-home.jpg"
               alt="Parking service illustration"

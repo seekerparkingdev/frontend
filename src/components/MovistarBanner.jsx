@@ -2,8 +2,8 @@ import React from "react";
 
 const MovistarBanner = () => {
   return (
-    <div className="w-full max-w-9x1 mx-auto  md:px-16 mt-3">
-      <div className="relative w-full h-70 md:h-96 overflow-hidden md:rounded-3xl shadow-lg md:text-left text-center md:text-">
+    <div className=" max-w-9xl mx-auto    mt-3">
+      <div className="relative w-full h-48 md:h-96 overflow-hidden md:rounded-3xl shadow-lg md:text-left text-center md:text-">
         {/* Imagen del banner */}
         <div
           className="absolute inset-0 bg-[url('/assets/banner.png')] bg-cover bg-center   "
@@ -14,20 +14,20 @@ const MovistarBanner = () => {
 
         {/* Movistar Logo */}
         <div className="w-full  absolute top-6 left-1/2 -translate-x-1/2 md:left-10 md:translate-x-0 ">
-          <div className="flex">
+          <div className="flex justify-center md:justify-start ">
             <img
               src="/assets/movistar-arena.png"
               alt="Movistar Arena Logo"
-              className="h-30  md:h-20 md:w-auto w-full"
+              className="h-30  md:h-20 md:w-auto w-3/5"
             />
           </div>
         </div>
 
         {/* Contenido Container */}
-        <div className="relative md:h-full h-64 flex flex-col justify-between p-4 md:p-6">
+        <div className="relative md:h-full   flex flex-col justify-between p-4 md:p-6">
           {/* Main Text */}
-          <div className="mt-20 ml-2 md:ml-9">
-            <h1 className="text-white text-base md:text-4xl font-bold max-w-xl">
+          <div className="mt-16 md:mt-32 ml-2 md:ml-9">
+            <h1 className="text-white text-base md:text-4xl font-bold max-w-xl font-urbanist">
               Reservá estacionamiento y
               <br />
               disfrutá más de la experiencia.
@@ -35,7 +35,7 @@ const MovistarBanner = () => {
           </div>
 
           {/* Bottom seleccion y direccion */}
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-auto gap-6 md:gap-0">
+          <div className="flex flex-col md:flex-row md:items-start items-center  justify-between md:mt-auto mt-6 gap-6 md:gap-0 ">
             {/* Location */}
             <div className="flex items-center text-white">
               <svg
@@ -55,7 +55,7 @@ const MovistarBanner = () => {
             </div>
 
             {/* Buttons */}
-            <div className=" flex-col md:flex-row gap-4 w-full md:w-auto hidden md:flex">
+            <div className=" flex-col md:flex-row gap-4 w-full md:w-auto hidden md:flex font-urbanist">
               <button className="w-full md:w-auto px-6 py-2 bg-[#4B6FC7] text-white rounded-full border border-[#FFFFFF]">
                 Como llegar
               </button>
@@ -66,7 +66,7 @@ const MovistarBanner = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-row gap-1 w-full md:hidden mt-2 font-metropolis text-xl">
+      <div className="flex flex-row gap-6  w-full md:hidden mt-2 font-urbanist text-xl p-1">
         <button className="w-1/2 py-4 md:w-auto bg-[#4B6FC7] text-white rounded-full  ">
           Como llegar
         </button>

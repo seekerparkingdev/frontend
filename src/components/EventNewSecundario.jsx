@@ -87,7 +87,8 @@ const EventNewSecundario = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (sliderRef.current) {
-        sliderRef.current.scrollLeft += 300;
+        const scrollAmount = sliderRef.current.clientWidth * 0.32; // Mover el ancho de 1 tarjeta
+        sliderRef.current.scrollLeft += scrollAmount;
         if (
           sliderRef.current.scrollLeft >=
           sliderRef.current.scrollWidth - sliderRef.current.clientWidth
@@ -102,8 +103,8 @@ const EventNewSecundario = () => {
   // Renderizado para móvil
   if (isMobile) {
     return (
-      <div className="px-4 py-4 mt-4">
-        <h1 className="text-3xl font-bold mb-4 text-[#30364C] font-urbanist">
+      <div className="px-4 py-4 mt-4 font-urbanist">
+        <h1 className="text-[40px] font-bold mb-4 text-[#30364C] font-urbanist">
           Nuevos eventos
         </h1>
         <div className="flex overflow-x-auto bg-[#D4F7FF]   px-5 py-16 gap-4 no-scrollbar  rounded-xl ">
@@ -118,7 +119,7 @@ const EventNewSecundario = () => {
                   alt={event.mobileName}
                   className="w-full h-52 object-cover  rounded-b-[29px]"
                 />
-                <div className="absolute top-3 right-3  bg-[#C1FF71] text-black text-xs font-bold px-4 py-2 rounded-2xl font-metropolis">
+                <div className="absolute top-3 right-3  bg-[#C1FF71] text-black text-xs font-bold px-4 py-2 rounded-2xl font-urbanist">
                   {event.mobileDate}
                 </div>
               </div>
@@ -126,7 +127,7 @@ const EventNewSecundario = () => {
                 <h2 className="text-sm font-bold text-[#30364C] line-clamp-2  font-urbanist">
                   {event.mobileName}
                 </h2>
-                <p className="font-metropolis text-xs mt-1 text-[#30364C]  ">
+                <p className="font-urbanist text-xs mt-1 text-[#30364C]  ">
                   {event.mobileLocation}
                 </p>
               </div>
@@ -139,21 +140,21 @@ const EventNewSecundario = () => {
 
   // Renderizado para desktop -
   return (
-    <div className="max-w-[1800px] mx-auto px-4 py-4 mt-4">
-      <h1 className="text-[#30364C] md:text-4xl text-2xl font-bold font-urbanist mb-6">
+    <div className=" max-w-9xl mx-auto px-4 py-4 mt-4">
+      <h1 className="text-[#30364C] md:text-4xl text-2xl font-semibold   mb-6 font-urbanist">
         Nuevos eventos
       </h1>
-      <div className="overflow-hidden relative bg-[#D4F7FF]   py-8   rounded-2xl">
+      <div className="overflow-hidden relative bg-[#D4F7FF] max-w-9xl w-full mx-auto py-8 flex justify-center items-center rounded-2xl">
         <div
           ref={sliderRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth no-scrollbar ml-[40px]"
+          className="flex gap-10 overflow-x-auto scroll-smooth no-scrollbar"
         >
           {events.map((event) => (
             <div
               key={event.id}
-              className="min-w-[20%]   md:min-w-[30%] lg:min-w-[25%] flex-shrink-0"
+              className="min-w-[60%] sm:min-w-[50%] md:min-w-[45%] lg:min-w-[30%] flex-shrink-0 box-shadow: 0px 4px 4px 0px #00000040;"
             >
-              <div className="bg-white rounded-3xl border-2 border-t-0 overflow-hidden  shadow-sm flex flex-col h-full">
+              <div className="bg-white rounded-3xl border-2 border-t-0 overflow-hidden shadow-sm flex flex-col h-full">
                 <div className="relative h-52 w-full overflow-hidden">
                   <img
                     src={event.image}
@@ -173,7 +174,7 @@ const EventNewSecundario = () => {
                       {event.date}
                     </p>
                   </div>
-                  <button className="w-full px-4 py-2  font-semibold bg-[#D5FF99] text-[#30364C] sm:bg-[#4B6FC7] sm:text-white rounded-full font-metropolis text-xs md:text-sm shadow-xl">
+                  <button className="  w-full px-4 py-2   bg-[#D5FF99] text-[#30364C] sm:bg-[#4B6FC7] sm:text-white rounded-full  font-urbanist text-xs md:text-xl shadow-xl">
                     <span className="block sm:hidden">Reservar</span>
                     <span className="hidden sm:block">
                       Comprá tu estacionamiento
