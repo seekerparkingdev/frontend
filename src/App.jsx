@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 // vistas
 import ViewVenue from "./pages/pageVenue";
 import ViewHome from "./pages/pageHome";
+import ViewParkings from "./pages/pageParkings";
 // componentes fijos
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ViewHome />} />
           <Route path="/venue" element={<ViewVenue/>} />
+          <Route path="/parkings" element={<ViewParkings/>} />
         </Routes>
       </main>
       <Footer />
