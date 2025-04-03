@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowLeft } from "lucide-react";
 const ParkingHeader = () => {
   return (
-    <div className="mb-4 bg-white p-4">
+    <div className="mb-4 bg-white md:p-4 p-0">
       {/* Título principal */}
       <button className="flex items-center  space-x-2 p-2 md:hidden">
         <ArrowLeft className="w-7 h-7" />
@@ -60,7 +60,7 @@ const ParkingHeader = () => {
       </div>
 
       {/* Fechas y horarios de reserva */}
-      <div className="mt-10 bg-[#F6FDFF] rounded-lg p-3 flex items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+      <div className="hidden mt-10 bg-[#F6FDFF] rounded-lg p-3 md:flex items-center shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
         <div className="text-[26px] font-urbanist text-[#30364C]">
           <div className="font-medium flex items-center">
             <img

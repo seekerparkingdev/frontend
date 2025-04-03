@@ -74,8 +74,8 @@ const ParkingFinder = () => {
   ];
 
   return (
-    <div className="mx-auto bg-white rounded-lg shadow-md p-4  ">
-      <h2 className="text-[26px] font-semibold text-[#30364C] mb-4 font-urbanist">
+    <div className="mx-auto bg-white rounded-lg md:shadow-md p-4  ">
+      <h2 className="text-[26px] font-semibold text-[#30364C] mb-4 font-urbanist md:block hidden">
         13 estacionamientos disponibles
       </h2>
 
@@ -100,7 +100,7 @@ const ParkingFinder = () => {
       </div>
 
       {/* Container con altura fija y scroll personalizado */}
-      <div className="h-96 overflow-y-auto custom-scrollbar ">
+      <div className="md:h-96 overflow-y-auto custom-scrollbar ">
         <div className=" ">
           {parkingSpots.map((spot) => (
             <div
