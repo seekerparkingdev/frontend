@@ -74,7 +74,7 @@ const ParkingFinder = () => {
   ];
 
   return (
-    <div className="mx-auto bg-white rounded-lg md:shadow-md p-4  ">
+    <div className="mx-auto bg-white rounded-lg md:shadow-md md:p-4 p-0  ">
       <h2 className="text-[26px] font-semibold text-[#30364C] mb-4 font-urbanist md:block hidden">
         13 estacionamientos disponibles
       </h2>
@@ -101,26 +101,26 @@ const ParkingFinder = () => {
 
       {/* Container con altura fija y scroll personalizado */}
       <div className="md:h-96 overflow-y-auto custom-scrollbar ">
-        <div className=" ">
+        <div className="border-t   border-[#4B6FC7] ">
           {parkingSpots.map((spot) => (
             <div
               key={spot.id}
-              className="border-b border-t border-[#4B6FC7] pb-4 font-metropolis text-[#283B72] p-4"
+              className="border-b   border-[#4B6FC7] pb-4 font-metropolis text-[#283B72] p-4"
             >
-              <h3 className="text-[25px] font-semibold">{spot.name}</h3>
+              <h3 className="md:text-[25px] text-[15px] font-semibold">{spot.name}</h3>
               <div className="flex items-center text-sm mb-1">
-                <span className="text-[15px] font-semibold">
+                <span className="md:text-[15px] text-[13px] font-semibold">
                   {spot.address}
                 </span>
                 <span className="mx-2 text-[#4B6FC7]">•</span>
-                <span className="flex items-center text-[#4B6FC7] text-[15px] font-medium">
+                <span className="flex items-center text-[#4B6FC7] md:text-[15px] text-[13px] font-medium">
                   <img src="assets/distancia.png" alt="" className="mr-2" />
                   {spot.distance}
                 </span>
               </div>
-              <p className="text-sm font-medium mb-2">{spot.city}</p>
+              <p className="md:text-sm text-xs font-medium mb-2">{spot.city}</p>
 
-              <p className="text-[#394A8F] font-semibold text-base mb-2">
+              <p className="text-[#394A8F] font-semibold md:text-base text-[15px] mb-2">
                 Quedan sólo {spot.spotsLeft} lugares
               </p>
 
@@ -131,21 +131,25 @@ const ParkingFinder = () => {
                 </div>
               )}
 
+            
+
+              <div className="flex w-full mt-2">
+                <button className="bg-[#4B6FC7] text-[#F6FDFF] rounded-l-3xl py-3 px-4 flex-1 md:text-base text-[15px] font-semibold">
+                  Estacioná desde
+                </button>
+                <div className="bg-[#D4F7FF] text-[#4B6FC7] font-semibold rounded-r-3xl py-3 px-4 flex-1 text-center text-[15px] md:text-base">
+                  $ {spot.price}
+                </div>
+                
+              </div>
+
+
               {spot.includesTransport && (
-                <div className="bg-black text-[#F6FDFF] text-xs px-3 py-1 rounded-full inline-block mb-3">
+                <div className="bg-black text-[#F6FDFF] text-xs px-3 py-1 rounded-full md:inline-block  mt-3 flex items-center">
                   <span className="mr-1 font-bold">Uber</span>
                   Incluye el traslado directo al lugar del evento
                 </div>
               )}
-
-              <div className="flex w-full mt-2">
-                <button className="bg-[#4B6FC7] text-[#F6FDFF] rounded-l-3xl py-3 px-4 flex-1 text-base font-semibold">
-                  Estacioná desde
-                </button>
-                <div className="bg-[#D4F7FF] text-[#4B6FC7] font-semibold rounded-r-3xl py-3 px-4 flex-1 text-center text-[16px]">
-                  $ {spot.price}
-                </div>
-              </div>
             </div>
           ))}
         </div>

@@ -1,13 +1,16 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
+import { NavLink } from "react-router-dom";
 const ParkingHeader = () => {
   return (
     <div className="mb-4 bg-white md:p-4 p-0">
       {/* Título principal */}
-      <button className="flex items-center  space-x-2 p-2 md:hidden">
-        <ArrowLeft className="w-7 h-7" />
-        <span className="text-lg font-metropolis font-bold">Volver</span>
-      </button>
+      <NavLink to={"/"}>
+        <button className="flex items-center  space-x-2 p-2 md:hidden">
+          <ArrowLeft className="w-7 h-7" />
+          <span className="text-lg font-metropolis font-bold">Volver</span>
+        </button>
+      </NavLink>
       <h1 className="text-2xl font-urbanist font-bold text-[#30364C] md:text-[#394A8F] mb-3">
         Estás buscando estacionamiento para
       </h1>

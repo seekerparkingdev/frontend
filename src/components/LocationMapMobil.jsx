@@ -15,15 +15,15 @@ L.Icon.Default.mergeOptions({
 });
 
 // Definición de iconos personalizados
-const createCustomIcon = (color, size = [25, 25]) => {
-  return L.divIcon({
-    html: `<div style="background-color: ${color}; width: 100%; height: 100%; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><div style="color: white; transform: translateY(-3px);">📍</div></div>`,
-    className: "custom-div-icon",
+const createImageIcon = (imageUrl, size = [32, 32]) => {
+  return L.icon({
+    iconUrl: imageUrl,
     iconSize: size,
-    iconAnchor: [12, 12],
-    popupAnchor: [0, -12],
+    iconAnchor: [size[0]/2, size[1]],
+    popupAnchor: [0, -size[1]]
   });
 };
+
 
 const LocationMapMobil = () => {
   // Estado para controlar si se muestra el mapa o la lista
@@ -69,11 +69,13 @@ const LocationMapMobil = () => {
   const getMarkerIcon = (status) => {
     switch (status) {
       case "available":
-        return createCustomIcon("#4B6FC7");
+        return createImageIcon("assets/locationgreen.png");
       case "unavailable":
-        return createCustomIcon("#9CA3AF");
+        return createImageIcon("assets/locationgray.png");
+      case "exhausted":
+        return createImageIcon("assets/locationorange.png");
       default:
-        return createCustomIcon("#4B6FC7");
+        return createImageIcon("assets/locationskyblue.png");
     }
   };
 
@@ -147,7 +149,7 @@ const LocationMapMobil = () => {
       {/* Sección del mapa o lista (toggle) */}
       {showMap ? (
         // Vista del mapa
-        <div className="h-64 mx-4 mb-4 rounded-lg overflow-hidden shadow-md relative">
+        <div className="h-96 mx-4 mb-4 rounded-lg overflow-hidden shadow-md relative">
           <MapContainer
             center={movistarArena.position}
             zoom={15}
