@@ -1,6 +1,6 @@
 import ParkingList from "../components/ParkingList";
 import LocationMap from "../components/LocationMap";
- 
+
 const pageParkings = () => {
   return (
     <div className="flex flex-row w-full h-screen">
