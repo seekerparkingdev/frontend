@@ -1,8 +1,8 @@
-import { Key, MoveUp, MoveDown  } from "lucide-react";
+import {MoveUp, MoveDown  } from "lucide-react";
  
 const ParkingNoLog = () => {
   return (
-    <div className="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden py-4 px-14 font-urbanist">
+    <div className="max-w-lg mx-auto bg-white rounded-xl shadow-md overflow-hidden py-4 px-14 font-urbanist md:block hidden">
       {/* Encabezado */}
       <div className="text-[#394A8F] text-[25px] font-bold  mb-2">
         En el estacionamiento
