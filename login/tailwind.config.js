@@ -88,11 +88,12 @@ export default {
         },
       },
       fontFamily: {
-        noto: ["Noto Sans", "sans-serif"], 
+        noto: ["Noto Sans", "sans-serif"],
         inter: ["Inter", "sans-serif"],
-        urbanist: ["Urbanist", "sans-serif"],  
+        urbanist: ["Urbanist", "sans-serif"],
         metropolis: ["Metropolis", "sans-serif"],
       },
+
       fontSize: {
         xs: ["0.75rem", { lineHeight: "1.5" }],
         sm: ["0.875rem", { lineHeight: "1.5715" }],
