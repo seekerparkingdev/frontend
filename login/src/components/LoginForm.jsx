@@ -2,17 +2,27 @@ import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { FaFacebookF } from "react-icons/fa";
 import { ArrowLeft } from "lucide-react";
+import TokenIframe from "./TokenIframe";
+import { PostLogin } from "../../services/Login";
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isIframeVisible, setIsIframeVisible] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Email:", email, "Password:", password);
+    const data = { email, password };
+    const response = await PostLogin(data);
+    if (response) {
+      const token = response.token;
+      sessionStorage.setItem("token", token);
+      setIsIframeVisible(true);
+    }
   };
 
   return (
     <div className="flex justify-center items-center p-4">
+      {isIframeVisible && <TokenIframe />}
       <div className="bg-white rounded-lg md:shadow-md md:p-8 md:w-1/2  md:border-[#4B6FC7] md:border">
         <div className="md:hidden flex space-x-1 mb-4 font-bold font-urbanist">
           <ArrowLeft className="text-[#30364C]" />
