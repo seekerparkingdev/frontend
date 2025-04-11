@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { HiMenuAlt1 } from "react-icons/hi";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
